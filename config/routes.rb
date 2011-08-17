@@ -1,4 +1,13 @@
 Items::Application.routes.draw do
+  resources :users, :user_sessions
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+  
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
+
+  resources :items
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
