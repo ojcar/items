@@ -43,4 +43,19 @@ class ApplicationController < ActionController::Base
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end
+  
+  def check_role(role)
+    unless current_user && @current_user.has_role?(role)
+      flash[:notice] = "No hay acceso"
+      redirect_to index_url
+    end
+  end
+  
+  def check_administrator_role
+    check_role('Admin')
+  end
+  
+  def check_editor_role
+    check_role('Editor')
+  end
 end

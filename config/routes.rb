@@ -1,4 +1,10 @@
 Items::Application.routes.draw do
+  get "roles/index"
+
+  get "roles/update"
+
+  get "roles/destroy"
+
   resources :users, :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
