@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_filter :check_administrator_role, :only => [:index, :destroy]
   before_filter :require_user, :only => [:edit, :update]
+  
+  #TODO fix permission, only self can edit self data, not others
+  
   # GET /users
   # GET /users.xml
   def index

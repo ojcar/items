@@ -1,4 +1,8 @@
 Items::Application.routes.draw do
+  resources :sources
+
+  resources :categories
+
   get "author/index"
 
   get "author/show"

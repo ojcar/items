@@ -4,6 +4,8 @@ class Item < ActiveRecord::Base
   validates :url, :presence => true
 
   belongs_to :author
+  belongs_to :category
+  belongs_to :source
   
   
 end

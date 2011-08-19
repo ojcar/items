@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_filter :check_administrator_role, :except => [:index,:show]
+  
   # GET /items
   # GET /items.xml
   def index
