@@ -1,4 +1,14 @@
 Items::Application.routes.draw do
+  get "author/index"
+
+  get "author/show"
+
+  get "author/edit"
+
+  get "author/update"
+
+  get "author/destroy"
+
   get "roles/index"
 
   get "roles/update"
