@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
-  before_filter :check_administrator_role, :except => [:index,:show]
+  #before_filter :check_administrator_role, :except => [:index,:show]
+  autocomplete :category, :name, :full => true
+  autocomplete :author, :name, :full => true
+  autocomplete :source, :name, :full => true
   
   # GET /items
   # GET /items.xml
@@ -43,6 +46,11 @@ class ItemsController < ApplicationController
   # POST /items.xml
   def create
     @item = Item.new(params[:item])
+    
+    @author = @item.create_author(params[:author][:name])
+    #@source = @item.create_source(:source_name)
+    @item.author_id = @author.id
+    #@item.source_id = 1
 
     respond_to do |format|
       if @item.save

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819061156) do
+ActiveRecord::Schema.define(:version => 20110831052953) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20110819061156) do
     t.datetime "updated_at"
   end
 
+  create_table "authors_users", :id => false, :force => true do |t|
+    t.integer "author_id"
+    t.integer "user_id"
+  end
+
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -40,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20110819061156) do
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "author_id"
+    t.integer  "source_id"
   end
 
   create_table "roles", :force => true do |t|
@@ -51,6 +58,18 @@ ActiveRecord::Schema.define(:version => 20110819061156) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer "role_id", :null => false
     t.integer "user_id", :null => false
+  end
+
+  create_table "sources", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sources_users", :id => false, :force => true do |t|
+    t.integer "sources_id"
+    t.integer "users_id"
   end
 
   create_table "users", :force => true do |t|

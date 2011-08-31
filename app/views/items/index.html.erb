@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Title</th>
+<th>Author</th>
+<th>Source</th>
     <th>Excerpt</th>
     <th>Url</th>
     <th>Published at</th>
@@ -14,6 +16,8 @@
 <% @items.each do |item| %>
   <tr>
     <td><%= item.title %></td>
+<td><%= item.author %></td>
+<td><%= item.source %></td>
     <td><%= item.excerpt %></td>
     <td><%= item.url %></td>
     <td><%= item.published_at %></td>

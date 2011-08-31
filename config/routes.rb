@@ -1,7 +1,19 @@
 Items::Application.routes.draw do
-  resources :sources
+  resources :sources do
+    member do
+      post 'seguir'
+    end
+  end
 
   resources :categories
+  
+  resources :authors do
+    member do
+      post 'subscribe'
+    end
+  end
+  
+
 
   get "author/index"
 
@@ -28,6 +40,9 @@ Items::Application.routes.draw do
 
   resources :items
 
+  match 'authors/:id/seguir' => 'authors#subscribe'
+  match 'sources/:id/seguir' => 'sources#subscribe'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

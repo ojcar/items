@@ -1,6 +1,18 @@
 class AuthorController < ApplicationController
   before_filter :check_administrator_role, :except => [:index, :show]
   
+  def subscribe
+    @author = Author.find(params[:id])
+    @user = User.find(1) # should be current_user
+    
+    @author.users << @user
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+  
+  
   def index
     @authors = Author.all
 

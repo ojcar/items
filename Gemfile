@@ -10,6 +10,10 @@ gem 'sqlite3'
 gem 'authlogic'
 gem 'omniauth'
 
+gem 'jquery-rails', '>= 1.0.12'
+
+gem 'rails3-jquery-autocomplete'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
