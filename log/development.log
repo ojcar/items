@@ -142,3 +142,197 @@ Migrating to CreateCategories (20110819061156)
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_persistence_token')[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_email')
   [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_username')[0m
+
+
+Started GET "/items/" for 127.0.0.1 at Sun May 20 19:34:53 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (43.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSource Load (0.5ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.2ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 2 LIMIT 1[0m
+Rendered items/index.html.erb within layouts/application (186.3ms)
+Completed 200 OK in 377ms (Views: 218.9ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at Sun May 20 19:40:45 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+Rendered items/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 99ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/" for 127.0.0.1 at Sun May 20 20:38:43 -0700 2012
+
+ActionController::RoutingError (uninitialized constant AuthorsController):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/" for 127.0.0.1 at Sun May 20 20:38:51 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by UsersController#index as HTML
+Completed   in 31ms
+
+NoMethodError (undefined method `Session' for Authlogic:Module):
+  app/models/user_session.rb:1
+  app/controllers/application_controller.rb:11:in `current_user_session'
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/application_controller.rb:48:in `check_role'
+  app/controllers/application_controller.rb:55:in `check_administrator_role'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started GET "/users/show/1" for 127.0.0.1 at Sun May 20 20:39:00 -0700 2012
+
+ActionController::RoutingError (No route matches "/users/show/1"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Sun May 20 20:39:04 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+  [1m[36mUser Load (18.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed   in 142ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:21:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun May 20 20:39:14 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by UsersController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+Rendered users/_form.html.erb (32.5ms)
+Rendered users/new.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 91ms (Views: 68.7ms | ActiveRecord: 18.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun May 20 20:39:52 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"BMf1jDzvl4ADBkBFf6dW/pWXO9jVIXCxObtkOO0HdPs=", "utf8"=>"\342\234\223", "user"=>{"last_request_at(1i)"=>"2012", "crypted_password"=>"[FILTERED]", "last_request_at(2i)"=>"5", "last_request_at(3i)"=>"21", "username"=>"ojcar", "last_request_at(4i)"=>"03", "failed_login_count"=>"0", "last_request_at(5i)"=>"39", "last_login_at(1i)"=>"2012", "current_login_ip"=>"", "password_salt"=>"[FILTERED]", "current_login_at(1i)"=>"2012", "last_login_at(2i)"=>"5", "persistence_token"=>"ojcar", "login_count"=>"0", "current_login_at(2i)"=>"5", "last_login_at(3i)"=>"21", "current_login_at(3i)"=>"21", "last_login_at(4i)"=>"03", "last_login_ip"=>"", "current_login_at(4i)"=>"03", "last_login_at(5i)"=>"39", "email"=>"orm84@yahoo.com", "current_login_at(5i)"=>"39"}}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('orm84@yahoo.com')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."username") = LOWER('ojcar')) LIMIT 1[0m
+  [1m[35mUser Load (17.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = 'ojcar') LIMIT 1
+Rendered users/_form.html.erb (30.7ms)
+Rendered users/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 195ms (Views: 42.1ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sun May 20 20:40:11 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"BMf1jDzvl4ADBkBFf6dW/pWXO9jVIXCxObtkOO0HdPs=", "utf8"=>"\342\234\223", "user"=>{"last_request_at(1i)"=>"2012", "crypted_password"=>"[FILTERED]", "last_request_at(2i)"=>"5", "last_request_at(3i)"=>"21", "username"=>"ojcar", "last_request_at(4i)"=>"03", "failed_login_count"=>"0", "last_request_at(5i)"=>"39", "last_login_at(1i)"=>"2012", "current_login_ip"=>"", "password_salt"=>"[FILTERED]", "current_login_at(1i)"=>"2012", "last_login_at(2i)"=>"5", "persistence_token"=>"ojcar", "login_count"=>"0", "current_login_at(2i)"=>"5", "last_login_at(3i)"=>"21", "current_login_at(3i)"=>"21", "last_login_at(4i)"=>"03", "last_login_ip"=>"", "current_login_at(4i)"=>"03", "last_login_at(5i)"=>"39", "email"=>"orm84@yahoo.com", "current_login_at(5i)"=>"39"}}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from /Users/ojcar/apps/items/app/models/user.rb:2)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('orm84@yahoo.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."username") = LOWER('ojcar')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = 'ojcar') LIMIT 1[0m
+Rendered users/_form.html.erb (23.1ms)
+Rendered users/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 68ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at Sun May 20 20:40:26 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by ItemsController#new as HTML
+Rendered items/_form.html.erb (15.4ms)
+Rendered items/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 62ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/category/" for 127.0.0.1 at Sun May 20 20:40:48 -0700 2012
+
+ActionController::RoutingError (No route matches "/category"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/category/new" for 127.0.0.1 at Sun May 20 20:40:54 -0700 2012
+
+ActionController::RoutingError (No route matches "/category/new"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Sun May 20 20:41:05 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by CategoriesController#new as HTML
+Completed   in 3ms
+
+NoMethodError (undefined method `Session' for Authlogic:Module):
+  app/models/user_session.rb:1
+  app/controllers/application_controller.rb:11:in `current_user_session'
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/application_controller.rb:48:in `check_role'
+  app/controllers/application_controller.rb:55:in `check_administrator_role'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at Sun May 20 20:41:10 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+Rendered categories/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 111ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Sun May 20 20:41:14 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by CategoriesController#new as HTML
+Completed   in 3ms
+
+NoMethodError (undefined method `Session' for Authlogic:Module):
+  app/models/user_session.rb:1
+  app/controllers/application_controller.rb:11:in `current_user_session'
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/application_controller.rb:48:in `check_role'
+  app/controllers/application_controller.rb:55:in `check_administrator_role'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/sources/new" for 127.0.0.1 at Sun May 20 20:41:29 -0700 2012
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/ojcar/apps/items/app/controllers/application_controller.rb:4)
+  Processing by SourcesController#new as HTML
+Completed   in 3ms
+
+NoMethodError (undefined method `Session' for Authlogic:Module):
+  app/models/user_session.rb:1
+  app/controllers/application_controller.rb:11:in `current_user_session'
+  app/controllers/application_controller.rb:16:in `current_user'
+  app/controllers/application_controller.rb:48:in `check_role'
+  app/controllers/application_controller.rb:55:in `check_administrator_role'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
