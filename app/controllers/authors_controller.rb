@@ -1,4 +1,4 @@
-class AuthorController < ApplicationController
+class AuthorsController < ApplicationController
   before_filter :check_administrator_role, :except => [:index, :show]
   
   def subscribe
@@ -67,5 +67,4 @@ class AuthorController < ApplicationController
 
   def destroy
   end
-
 end

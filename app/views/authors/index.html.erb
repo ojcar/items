@@ -1,0 +1,10 @@
+<h1>Author#index</h1>
+<p>Find me in app/views/author/index.html.erb</p>
+
+
+<% @authors.each do |author| %>
+	<p>
+		<%= author.name %> | <%= author.url %> | 
+		<%= link_to 'Seguir', subscribe_author_path(author), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
+	</p>
+<% end %>

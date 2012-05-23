@@ -17,7 +17,7 @@
   </div>
 
 <div class="field">
-	<% fields_for :author do |author| %>
+	<%= fields_for :author do |author| %>
 		<%= author.label :author %><br />
 		<%= author.autocomplete_field :name, :autocomplete_author_name_items_path %>
 	<% end -%>

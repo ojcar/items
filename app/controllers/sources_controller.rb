@@ -1,5 +1,5 @@
 class SourcesController < ApplicationController
-  before_filter :check_administrator_role, :except => [:index, :show]
+  #before_filter :check_administrator_role, :except => [:index, :show]
   
   
   # GET /sources
