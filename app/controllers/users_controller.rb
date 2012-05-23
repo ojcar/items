@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :check_administrator_role, :only => [:index, :destroy]
+  before_filter :check_administrator_role, :only => [:index]
   before_filter :require_user, :only => [:edit, :update]
   
   #TODO fix permission, only self can edit self data, not others
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   # GET /users.xml
   def index
     @users = User.all
-
+  
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
@@ -39,7 +39,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
+    @authentications = @user.authentications if current_user
   end
 
   # POST /users
@@ -76,13 +77,13 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.xml
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(users_url) }
-      format.xml  { head :ok }
-    end
-  end
+  # def destroy
+  #   @user = User.find(params[:id])
+  #   @user.destroy
+  # 
+  #   respond_to do |format|
+  #     format.html { redirect_to(users_url) }
+  #     format.xml  { head :ok }
+  #   end
+  # end
 end

@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  
+  <% if current_user != nil  && current_user.id == user.id %>
+    <div class="omniauth-connect">
+      <%= render 'omniauth-connect', :authentications => authentications %>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <% end %>
+  
+  
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -20,44 +29,12 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :crypted_password %><br />
-    <%= f.text_field :crypted_password %>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_salt %><br />
-    <%= f.text_field :password_salt %>
-  </div>
-  <div class="field">
-    <%= f.label :persistence_token %><br />
-    <%= f.text_field :persistence_token %>
-  </div>
-  <div class="field">
-    <%= f.label :login_count %><br />
-    <%= f.text_field :login_count %>
-  </div>
-  <div class="field">
-    <%= f.label :failed_login_count %><br />
-    <%= f.text_field :failed_login_count %>
-  </div>
-  <div class="field">
-    <%= f.label :last_request_at %><br />
-    <%= f.datetime_select :last_request_at %>
-  </div>
-  <div class="field">
-    <%= f.label :current_login_at %><br />
-    <%= f.datetime_select :current_login_at %>
-  </div>
-  <div class="field">
-    <%= f.label :last_login_at %><br />
-    <%= f.datetime_select :last_login_at %>
-  </div>
-  <div class="field">
-    <%= f.label :current_login_ip %><br />
-    <%= f.text_field :current_login_ip %>
-  </div>
-  <div class="field">
-    <%= f.label :last_login_ip %><br />
-    <%= f.text_field :last_login_ip %>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit %>
