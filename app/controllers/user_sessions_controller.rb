@@ -21,10 +21,10 @@ class UserSessionsController < ApplicationController
     respond_to do |format|
       if @user_session.save
         format.html { redirect_to(:items, :notice => 'Login Succesful') }
-        #format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
+        format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else
         format.html { render :action => "new" }
-        #format.xml  { render :xml => @user_session.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @user_session.errors, :status => :unprocessable_entity }
       end
     end
   end

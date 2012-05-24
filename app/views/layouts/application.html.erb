@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<p><%= flash[:notice] %></p>
+<p><%= flash[:alert] %></p>
+
 <% if current_user %>
   Logged in as <%= current_user.username %>, <%= link_to "Log Out", logout_path %>
   <% else %>

@@ -1,4 +1,11 @@
 Items::Application.routes.draw do
+  get "submitted_items/index"
+
+  get "submitted_items/new"
+
+  get "submitted_items/create"
+
+  root :to => 'items#index'
 
   resources :items do
     get :autocomplete_author_name, :on => :collection
@@ -48,6 +55,9 @@ Items::Application.routes.draw do
 
   match 'authors/:id/seguir' => 'authors#subscribe'
   match 'sources/:id/seguir' => 'sources#subscribe'
+  
+  resources :submitted_items
+  match 'submit' => 'submitted_items#new', :as => :submititem
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

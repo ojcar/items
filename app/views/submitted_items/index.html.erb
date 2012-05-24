@@ -1,0 +1,18 @@
+<h1>SubmittedItems#index</h1>
+<p>Find me in app/views/submitted_items/index.html.erb</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Submitted by</th>
+  </tr>
+
+<% @submitteditems.each do |item| %>
+  <tr>
+    <td><%= item.url %></td>
+<td><%= item.user.username %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

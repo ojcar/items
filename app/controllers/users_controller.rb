@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   #before_filter :check_administrator_role, :only => [:index]
-  before_filter :require_user, :only => [:edit, :update]
+  before_filter :require_no_user, :only => [:new, :create]
+  before_filter :require_user, :only => [:show, :edit, :update]
   
   #TODO fix permission, only self can edit self data, not others
   
@@ -29,12 +30,12 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
-    @user = User.new
+      @user = User.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @user }
-    end
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @user }
+      end   
   end
 
   # GET /users/1/edit
