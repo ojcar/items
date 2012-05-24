@@ -1,4 +1,11 @@
 Items::Application.routes.draw do
+
+  resources :items do
+    get :autocomplete_author_name, :on => :collection
+    get :autocomplete_category_name, :on => :collection
+    get :autocomplete_source_name, :on => :collection
+  end
+
   resources :sources do
     member do
       post 'seguir'
@@ -13,7 +20,6 @@ Items::Application.routes.draw do
     end
   end
   
-
 
   get "author/index"
 

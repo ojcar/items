@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :check_administrator_role, :only => [:index]
+  #before_filter :check_administrator_role, :only => [:index]
   before_filter :require_user, :only => [:edit, :update]
   
   #TODO fix permission, only self can edit self data, not others

@@ -17,15 +17,24 @@
   </div>
 
 <div class="field">
-	<%= fields_for :author do |author| %>
-		<%= author.label :author %><br />
-		<%= author.autocomplete_field :name, :autocomplete_author_name_items_path %>
+	<%= fields_for "author" do |f| %>
+		<%= f.label :author %><br />
+		<%= f.autocomplete_field :name, autocomplete_author_name_items_path %>
 	<% end -%>
 </div>
 
 <div class="field">
+<%= fields_for "category" do |f| %>
+<%= f.label :category %><br />
+<%= f.autocomplete_field :name, autocomplete_category_name_items_path %>
+<% end %>
+</div>
+
+<div class="field">
+<%= fields_for "source" do |f| %>
 	<%= f.label :source %><br />
-	<%= f.text_field :source_id %>
+	<%= f.autocomplete_field :name, autocomplete_source_name_items_path %>
+  <% end %>
 </div>
   <div class="field">
     <%= f.label :excerpt %><br />

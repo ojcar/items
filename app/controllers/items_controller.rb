@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.all
+    @items = Item.find(:all, :limit => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,9 +47,20 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     
-    @author = @item.create_author(params[:author][:name])
+    # @item.category_id = 1;
+    #@item.author_id = 1;
+    #@item.source_id = 1;
+    
+    @item.category = Category.find_or_create_by_name(:name => params[:category][:name])
+    @item.author = Author.find_or_create_by_name(params[:author][:name])
+    @item.source = Source.find_or_create_by_name(params[:source][:name])
+    #@item.user = current_user
+    
+    @item.user_id = 1;
+    
+    #@author = @item.create_author(params[:author][:name])
     #@source = @item.create_source(:source_name)
-    @item.author_id = @author.id
+    #@item.author_id = @author.id
     #@item.source_id = 1
 
     respond_to do |format|

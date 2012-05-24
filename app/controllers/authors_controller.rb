@@ -1,5 +1,6 @@
 class AuthorsController < ApplicationController
-  before_filter :check_administrator_role, :except => [:index, :show]
+  #before_filter :check_administrator_role, :except => [:index, :show]
+  autocomplete :author, :name
   
   def subscribe
     @author = Author.find(params[:id])
@@ -57,7 +58,7 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
     
     if @author.update_attributes(params[:author])
-      format.html { redirect_to (@author, :notice => 'Informacion actualizada') }
+      format.html { redirect_to(@author, :notice => 'Actualizado') }
       format.xml { head :ok }
     else
       format.html { render :action => "edit" }

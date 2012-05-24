@@ -14,6 +14,8 @@ gem 'jquery-rails', '>= 1.0.12'
 
 gem 'rails3-jquery-autocomplete'
 
+gem "rake", "0.8.7"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

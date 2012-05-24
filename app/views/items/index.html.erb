@@ -16,8 +16,9 @@
 <% @items.each do |item| %>
   <tr>
     <td><%= item.title %></td>
-<td><%= item.author %></td>
-<td><%= item.source %></td>
+<td><%= item.author.name %></td>
+<td><%= item.source.name %></td>
+<td><%= item.category.name %></td>
     <td><%= item.excerpt %></td>
     <td><%= item.url %></td>
     <td><%= item.published_at %></td>
