@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.find(:all, :limit => 10)
+    @items = Item.find(:all, :limit => 30)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,22 +47,11 @@ class ItemsController < ApplicationController
   # POST /items.xml
   def create
     @item = Item.new(params[:item])
-    
-    # @item.category_id = 1;
-    #@item.author_id = 1;
-    #@item.source_id = 1;
-    
+      
     @item.category = Category.find_or_create_by_name(:name => params[:category][:name])
     @item.author = Author.find_or_create_by_name(params[:author][:name])
-    @item.source = Source.find_or_create_by_name(params[:source][:name])
+    @item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
     @item.user = current_user
-    
-    #@item.user_id = 1;
-    
-    #@author = @item.create_author(params[:author][:name])
-    #@source = @item.create_source(:source_name)
-    #@item.author_id = @author.id
-    #@item.source_id = 1
 
     respond_to do |format|
       if @item.save
@@ -102,5 +91,16 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
+  #private
+  def get_domain_from_url(url)
+    require 'uri'
+    url = "http://#{url}" unless url.start_with?('http')
+    host = URI.parse(url).host
+    
+    "http://#{host}"
+  end
+  
   
 end

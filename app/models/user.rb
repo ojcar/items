@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
   attr_accessor :password_confirmation
+  
   has_many :authentications, :dependent => :destroy
   has_many :submitted_items
+  has_many :items
+  
   has_and_belongs_to_many :roles
   has_and_belongs_to_many :authors
   has_and_belongs_to_many :sources

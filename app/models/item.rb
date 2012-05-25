@@ -6,6 +6,6 @@ class Item < ActiveRecord::Base
   belongs_to :author
   belongs_to :category
   belongs_to :source
-  
+  belongs_to :user
   
 end

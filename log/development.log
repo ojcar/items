@@ -5591,3 +5591,1552 @@ DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => fa
   [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 05:55:44.904642', "updated_at" = '2012-05-24 05:55:44.905640' WHERE "users"."id" = 1
 Rendered items/index.html.erb within layouts/application (222.9ms)
 Completed 200 OK in 323ms (Views: 225.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-24 16:05:41 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (5.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+Rendered items/index.html.erb within layouts/application (664.0ms)
+Completed 200 OK in 1277ms (Views: 687.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:07:36 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:39)
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 96ms
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:08:26 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:39)
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 405ms
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-05-24 16:08:31 -0700
+  Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+Rendered user_sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 84ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2012-05-24 16:08:41 -0700
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "user_session"=>{"username"=>"ojcar", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+ApplicationController::require_no_user
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'ojcar') LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from block in create at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/user_sessions_controller.rb:22)
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (3.0ms)[0m  [1mUPDATE "users" SET "login_count" = 7, "last_login_at" = '2012-05-24 05:55:44.547036', "current_login_at" = '2012-05-24 23:08:42.676042', "last_request_at" = '2012-05-24 23:08:42.695042', "updated_at" = '2012-05-24 23:08:42.696042' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/items
+Completed 302 Found in 793ms
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:08:42 -0700
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" LIMIT 10
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:08:43.314042', "updated_at" = '2012-05-24 23:08:43.315042' WHERE "users"."id" = 1[0m
+Rendered items/index.html.erb within layouts/application (376.0ms)
+Completed 200 OK in 447ms (Views: 390.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:08:48 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:08:48.611042', "updated_at" = '2012-05-24 23:08:48.612042' WHERE "users"."id" = 1
+Rendered items/_form.html.erb (17.0ms)
+Rendered items/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 209ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:09:57 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fern" for 127.0.0.1 at 2012-05-24 16:09:59 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fern"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:09:59.515042', "updated_at" = '2012-05-24 23:09:59.516042' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fern%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 138ms (Views: 17.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:10:00 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=De" for 127.0.0.1 at 2012-05-24 16:10:03 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"De"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:10:03.495326', "updated_at" = '2012-05-24 23:10:03.496326' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%de%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 148ms (Views: 19.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Discover" for 127.0.0.1 at 2012-05-24 16:10:10 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Discover"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:10:10.342010', "updated_at" = '2012-05-24 23:10:10.343010' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%discover%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 182ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:10:24 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"This is auto test", "excerpt"=>"I saw for the first time the earth's shape. I could easily see the shores of continents, islands, great rivers, folds of the terrain, large bodies of water. The horizon is dark blue, smoothly turning to black. . . the feelings which filled me I can express with one word—joy.", "url"=>"http://www.discover.com", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"08"}, "author"=>{"name"=>"Fernando Palma"}, "category"=>{"name"=>"Deportes"}, "source"=>{"name"=>"Discover"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:10:24.195396', "updated_at" = '2012-05-24 23:10:24.196396' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Deportes' LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Fernando Palma' LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Discover' LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources"."id" FROM "sources" WHERE ("sources"."name" = 'Discover') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "sources" ("name", "url", "created_at", "updated_at") VALUES ('Discover', 'http://www.discover.com', '2012-05-24 23:10:24.404416', '2012-05-24 23:10:24.404416')
+Completed   in 334ms
+
+NoMethodError (undefined method `user=' for #<Item:0x43025a0>):
+  app/controllers/items_controller.rb:60:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (37.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:14:27 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:14:32.548228', "updated_at" = '2012-05-24 23:14:32.549228' WHERE "users"."id" = 1
+Rendered items/_form.html.erb (14.0ms)
+Rendered items/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 1069ms (Views: 42.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:14:41 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fern" for 127.0.0.1 at 2012-05-24 16:14:43 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fern"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:14:43.411315', "updated_at" = '2012-05-24 23:14:43.412315' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fern%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 168ms (Views: 43.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:14:43 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=De" for 127.0.0.1 at 2012-05-24 16:14:45 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"De"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:14:46.114585', "updated_at" = '2012-05-24 23:14:46.115585' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%de%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 137ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Discover" for 127.0.0.1 at 2012-05-24 16:14:49 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Discover"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:14:49.605934', "updated_at" = '2012-05-24 23:14:49.605934' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%discover%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 145ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Wired" for 127.0.0.1 at 2012-05-24 16:15:04 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Wired"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:04.278401', "updated_at" = '2012-05-24 23:15:04.279401' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%wired%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 156ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:15:17 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"This is auto test", "excerpt"=>"I saw for the first time the earth's shape. I could easily see the shores of continents, islands, great rivers, folds of the terrain, large bodies of water. The horizon is dark blue, smoothly turning to black. . . the feelings which filled me I can express with one word—joy.", "url"=>"http://www.wired.com", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"14"}, "author"=>{"name"=>"Fernando Palma"}, "category"=>{"name"=>"Deportes"}, "source"=>{"name"=>"Wired"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:17.941767', "updated_at" = '2012-05-24 23:15:17.942767' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Deportes' LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Fernando Palma' LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Wired' LIMIT 1
+  [1m[36mSource Load (1.0ms)[0m  [1mSELECT "sources"."id" FROM "sources" WHERE ("sources"."name" = 'Wired') LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "sources" ("name", "url", "created_at", "updated_at") VALUES ('Wired', 'http://www.wired.com', '2012-05-24 23:15:18.159789', '2012-05-24 23:15:18.159789')
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "items" ("title", "url", "excerpt", "published_at", "created_at", "updated_at", "author_id", "source_id", "category_id", "user_id") VALUES ('This is auto test', 'http://www.wired.com', 'I saw for the first time the earth''s shape. I could easily see the shores of continents, islands, great rivers, folds of the terrain, large bodies of water. The horizon is dark blue, smoothly turning to black. . . the feelings which filled me I can express with one word—joy.', '2012-05-24 23:14:00.000000', '2012-05-24 23:15:18.190792', '2012-05-24 23:15:18.190792', 3, 6, 1, 1)[0m
+Redirected to http://localhost:3000/items/14
+Completed 302 Found in 373ms
+
+
+Started GET "/items/14" for 127.0.0.1 at 2012-05-24 16:15:18 -0700
+  Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mItem Load (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 14 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCategory Load (2.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:15:18.626836', "updated_at" = '2012-05-24 23:15:18.627836' WHERE "users"."id" = 1
+Rendered items/show.html.erb within layouts/application (277.0ms)
+Completed 200 OK in 322ms (Views: 299.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:15:21 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:22.128186', "updated_at" = '2012-05-24 23:15:22.129186' WHERE "users"."id" = 1[0m
+Rendered items/index.html.erb within layouts/application (358.0ms)
+Completed 200 OK in 455ms (Views: 374.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:15:29 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:15:29.479921', "updated_at" = '2012-05-24 23:15:29.480921' WHERE "users"."id" = 1
+Rendered items/_form.html.erb (12.0ms)
+Rendered items/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 220ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:15:48 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fern" for 127.0.0.1 at 2012-05-24 16:15:49 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fern"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:50.059979', "updated_at" = '2012-05-24 23:15:50.059979' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fern%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 169ms (Views: 48.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:15:50 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=Di" for 127.0.0.1 at 2012-05-24 16:15:53 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"Di"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:53.643337', "updated_at" = '2012-05-24 23:15:53.644337' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%di%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 190ms (Views: 18.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Space+Ipsum" for 127.0.0.1 at 2012-05-24 16:15:58 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Space Ipsum"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:15:58.792852', "updated_at" = '2012-05-24 23:15:58.792852' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%space ipsum%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 181ms (Views: 24.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:16:17 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"More auto test", "excerpt"=>"Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.", "url"=>"http://www.spaceipsum.com/this/andthat", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"15"}, "author"=>{"name"=>"Fernando Plata"}, "category"=>{"name"=>"Dissapointment"}, "source"=>{"name"=>"Space Ipsum"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:16:17.407713', "updated_at" = '2012-05-24 23:16:17.408713' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Dissapointment' LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Fernando Plata' LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Space Ipsum' LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources"."id" FROM "sources" WHERE ("sources"."name" = 'Space Ipsum') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "sources" ("name", "url", "created_at", "updated_at") VALUES ('Space Ipsum', 'http://www.spaceipsum.com', '2012-05-24 23:16:17.561729', '2012-05-24 23:16:17.561729')
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "items" ("title", "url", "excerpt", "published_at", "created_at", "updated_at", "author_id", "source_id", "category_id", "user_id") VALUES ('More auto test', 'http://www.spaceipsum.com/this/andthat', 'Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.', '2012-05-24 23:15:00.000000', '2012-05-24 23:16:17.583731', '2012-05-24 23:16:17.583731', 5, 7, 5, 1)[0m
+Redirected to http://localhost:3000/items/15
+Completed 302 Found in 346ms
+
+
+Started GET "/items/15" for 127.0.0.1 at 2012-05-24 16:16:17 -0700
+  Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mItem Load (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 15 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:16:18.083781', "updated_at" = '2012-05-24 23:16:18.084781' WHERE "users"."id" = 1
+Rendered items/show.html.erb within layouts/application (336.0ms)
+Completed 200 OK in 373ms (Views: 351.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:16:20 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (2.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:16:20.797052', "updated_at" = '2012-05-24 23:16:20.797052' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (319.0ms)
+Completed 200 OK in 356ms (Views: 331.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/sources/" for 127.0.0.1 at 2012-05-24 16:16:28 -0700
+  Processing by SourcesController#index as HTML
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources"[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:16:29.256898', "updated_at" = '2012-05-24 23:16:29.257898' WHERE "users"."id" = 1
+Rendered sources/index.html.erb within layouts/application (287.0ms)
+Completed 200 OK in 331ms (Views: 313.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sources/7" for 127.0.0.1 at 2012-05-24 16:16:37 -0700
+  Processing by SourcesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:16:38.346807', "updated_at" = '2012-05-24 23:16:38.347807' WHERE "users"."id" = 1
+Rendered sources/show.html.erb within layouts/application (275.0ms)
+Completed 200 OK in 350ms (Views: 298.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/sources" for 127.0.0.1 at 2012-05-24 16:31:25 -0700
+  Processing by SourcesController#index as HTML
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources"[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:31:25.752840', "updated_at" = '2012-05-24 23:31:25.753840' WHERE "users"."id" = 1
+Rendered sources/index.html.erb within layouts/application (167.0ms)
+Completed 200 OK in 205ms (Views: 183.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-24 16:32:21 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:32:21.438840', "updated_at" = '2012-05-24 23:32:21.439840' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (264.0ms)
+Completed 200 OK in 331ms (Views: 311.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-24 16:35:50 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:35:55.798840', "updated_at" = '2012-05-24 23:35:55.799840' WHERE "users"."id" = 1[0m
+Rendered items/index.html.erb within layouts/application (680.0ms)
+Completed 200 OK in 1155ms (Views: 694.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:36:10 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:36:10.884840', "updated_at" = '2012-05-24 23:36:10.885840' WHERE "users"."id" = 1
+Rendered items/_form.html.erb (13.0ms)
+Rendered items/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 188ms (Views: 43.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:39:50 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fernando+Palma" for 127.0.0.1 at 2012-05-24 16:39:53 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fernando Palma"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:39:54.125840', "updated_at" = '2012-05-24 23:39:54.126840' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fernando palma%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 137ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:39:56 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=De" for 127.0.0.1 at 2012-05-24 16:39:58 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"De"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:39:58.475840', "updated_at" = '2012-05-24 23:39:58.476840' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%de%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 141ms (Views: 18.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=Deport" for 127.0.0.1 at 2012-05-24 16:39:59 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"Deport"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:39:59.626840', "updated_at" = '2012-05-24 23:39:59.628840' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%deport%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 159ms (Views: 19.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=Deportes" for 127.0.0.1 at 2012-05-24 16:40:01 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"Deportes"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:40:01.907840', "updated_at" = '2012-05-24 23:40:01.908840' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%deportes%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 144ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Huggin" for 127.0.0.1 at 2012-05-24 16:40:06 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Huggin"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:40:06.497840', "updated_at" = '2012-05-24 23:40:06.497840' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%huggin%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 145ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Hu" for 127.0.0.1 at 2012-05-24 16:40:07 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Hu"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:40:07.790840', "updated_at" = '2012-05-24 23:40:07.791840' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%hu%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 160ms (Views: 24.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Huffington+Post" for 127.0.0.1 at 2012-05-24 16:40:09 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Huffington Post"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:40:10.187840', "updated_at" = '2012-05-24 23:40:10.188840' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%huffington post%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 139ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:40:27 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"One more auto test", "excerpt"=>"More auto test", "url"=>"http://google.com/adsense", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"36"}, "author"=>{"name"=>"Fernando Palma"}, "category"=>{"name"=>"Deportes"}, "source"=>{"name"=>"Huffington Post"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:40:27.491840', "updated_at" = '2012-05-24 23:40:27.492840' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Deportes' LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Fernando Palma' LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Huffington Post' LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources"."id" FROM "sources" WHERE ("sources"."name" = 'Huffington Post') LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  INSERT INTO "sources" ("name", "url", "created_at", "updated_at") VALUES ('Huffington Post', 'http://google.com', '2012-05-24 23:40:27.782840', '2012-05-24 23:40:27.782840')
+Completed   in 422ms
+
+NoMethodError (undefined method `user=' for #<Item:0x45a7640>):
+  app/controllers/items_controller.rb:60:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/items/" for 127.0.0.1 at 2012-05-24 16:40:53 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:40:54.252840', "updated_at" = '2012-05-24 23:40:54.253840' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (323.0ms)
+Completed 200 OK in 360ms (Views: 340.0ms | ActiveRecord: 10.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateItems (20110816054714)
+Migrating to CreateUsers (20110816064151)
+Migrating to CreateAuthentications (20110817063405)
+Migrating to CreateRoles (20110818064451)
+Migrating to CreateRolesUsersJoin (20110818064921)
+Migrating to CreateAuthors (20110818203417)
+Migrating to CreateCategories (20110819061156)
+Migrating to CreateSources (20110819061756)
+Migrating to AddAuthorsAndPublicationsToItems (20110824051002)
+Migrating to AuthorsUsersRelation (20110831052333)
+Migrating to SourcesUsersRelation (20110831052953)
+Migrating to AddCategoriesToItems (20120523204940)
+Migrating to AddUsersToItems (20120523205513)
+Migrating to CreateSubmittedItems (20120524042431)
+Migrating to ChangePublishedColumn (20120524053616)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("authentications")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("authors")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("authors_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("categories")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("items")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("roles")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("roles_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("sources")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("sources_users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("submitted_items")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_persistence_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_username')[0m
+
+
+Started GET "/users/" for 127.0.0.1 at 2012-05-24 16:51:28 -0700
+  Processing by UsersController#index as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:51:33.483314', "updated_at" = '2012-05-24 23:51:33.484314' WHERE "users"."id" = 1[0m
+Rendered users/index.html.erb within layouts/application (276.0ms)
+Completed 200 OK in 1029ms (Views: 302.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-05-24 16:51:44 -0700
+  Processing by UsersController#new as HTML
+ApplicationController::require_no_user
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:51:45.142480', "updated_at" = '2012-05-24 23:51:45.142480' WHERE "users"."id" = 1
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:39)
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-24 16:51:45 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:51:45.761541', "updated_at" = '2012-05-24 23:51:45.762542' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (428.0ms)
+Completed 200 OK in 532ms (Views: 444.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:51:48 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:51:49.143880', "updated_at" = '2012-05-24 23:51:49.144880' WHERE "users"."id" = 1[0m
+Rendered items/_form.html.erb (14.0ms)
+Rendered items/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 231ms (Views: 45.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:51:58 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fernando+Gara" for 127.0.0.1 at 2012-05-24 16:52:02 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fernando Gara"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:02.737239', "updated_at" = '2012-05-24 23:52:02.738239' WHERE "users"."id" = 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fernando gara%') ORDER BY authors.name ASC LIMIT 10[0m
+Completed 200 OK in 145ms (Views: 19.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fernando+Garabit" for 127.0.0.1 at 2012-05-24 16:52:03 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fernando Garabit"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:03.494315', "updated_at" = '2012-05-24 23:52:03.495315' WHERE "users"."id" = 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fernando garabit%') ORDER BY authors.name ASC LIMIT 10[0m
+Completed 200 OK in 149ms (Views: 19.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Fernando+Garavito" for 127.0.0.1 at 2012-05-24 16:52:04 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Fernando Garavito"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:04.728438', "updated_at" = '2012-05-24 23:52:04.729438' WHERE "users"."id" = 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%fernando garavito%') ORDER BY authors.name ASC LIMIT 10[0m
+Completed 200 OK in 171ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=De" for 127.0.0.1 at 2012-05-24 16:52:06 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"De"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:06.278593', "updated_at" = '2012-05-24 23:52:06.279593' WHERE "users"."id" = 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%de%') ORDER BY categories.name ASC LIMIT 10[0m
+Completed 200 OK in 151ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:52:07 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Disc" for 127.0.0.1 at 2012-05-24 16:52:13 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Disc"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:13.998365', "updated_at" = '2012-05-24 23:52:13.999365' WHERE "users"."id" = 1
+  [1m[36mSource Load (1.0ms)[0m  [1mSELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%disc%') ORDER BY sources.name ASC LIMIT 10[0m
+Completed 200 OK in 177ms (Views: 19.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:52:42 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"One more auto test", "excerpt"=>"Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.", "url"=>"http://google.com/adsense", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"51"}, "author"=>{"name"=>"Fernando Garavito"}, "category"=>{"name"=>"Deportes"}, "source"=>{"name"=>"Discover"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:52:42.455210', "updated_at" = '2012-05-24 23:52:42.456210' WHERE "users"."id" = 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Deportes' LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Fernando Garavito' LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors"."id" FROM "authors" WHERE ("authors"."name" = 'Fernando Garavito') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "authors" ("name", "url", "created_at", "updated_at") VALUES ('Fernando Garavito', NULL, '2012-05-24 23:52:42.658231', '2012-05-24 23:52:42.658231')
+  [1m[36mSource Load (1.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Discover' LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "items" ("title", "url", "excerpt", "published_at", "created_at", "updated_at", "author_id", "source_id", "category_id", "user_id") VALUES ('One more auto test', 'http://google.com/adsense', 'Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.', '2012-05-24 23:51:00.000000', '2012-05-24 23:52:42.751240', '2012-05-24 23:52:42.751240', 6, 5, 1, 1)
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 398ms
+
+
+Started GET "/items/16" for 127.0.0.1 at 2012-05-24 16:52:42 -0700
+  Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 16 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 5 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 6 LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:52:43.168282', "updated_at" = '2012-05-24 23:52:43.169282' WHERE "users"."id" = 1[0m
+Rendered items/show.html.erb within layouts/application (250.0ms)
+Completed 200 OK in 287ms (Views: 266.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:52:49 -0700
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" LIMIT 10
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:9)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:52:49.491914', "updated_at" = '2012-05-24 23:52:49.492914' WHERE "users"."id" = 1[0m
+Rendered items/index.html.erb within layouts/application (346.0ms)
+Completed 200 OK in 381ms (Views: 359.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:54:10 -0700
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" LIMIT 10
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+Rendered items/index.html.erb within layouts/application (213.0ms)
+Completed   in 250ms
+
+ActionView::Template::Error (undefined method `user' for #<Item:0x4af6778>):
+    18:   <tr>
+    19:     <td><%= item.title %></td>
+    20: <td><%= item.author.name %></td>
+    21: <td><%= item.user.username %></td>
+    22: <td><%= item.source.name %></td>
+    23: <td><%= item.category.name %></td>
+    24:     <td><%= item.excerpt %></td>
+  app/views/items/index.html.erb:21:in `block in _app_views_items_index_html_erb__109220249_39287760_873228629'
+  app/views/items/index.html.erb:17:in `each'
+  app/views/items/index.html.erb:17:in `_app_views_items_index_html_erb__109220249_39287760_873228629'
+  app/controllers/items_controller.rb:13:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/items/" for 127.0.0.1 at 2012-05-24 16:55:52 -0700
+  Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" LIMIT 10
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:55:53.412304', "updated_at" = '2012-05-24 23:55:53.413304' WHERE "users"."id" = 1[0m
+Rendered items/index.html.erb within layouts/application (329.0ms)
+Completed 200 OK in 369ms (Views: 340.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2012-05-24 16:56:13 -0700
+  Processing by ItemsController#new as HTML
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:56:14.004363', "updated_at" = '2012-05-24 23:56:14.005363' WHERE "users"."id" = 1
+Rendered items/_form.html.erb (23.0ms)
+Rendered items/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 366ms (Views: 198.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2012-05-24 16:57:14 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Elto" for 127.0.0.1 at 2012-05-24 16:57:15 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Elto"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:16.056568', "updated_at" = '2012-05-24 23:57:16.057568' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%elto%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 144ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Elton+Ko" for 127.0.0.1 at 2012-05-24 16:57:16 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Elton Ko"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:17.005663', "updated_at" = '2012-05-24 23:57:17.006663' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%elton ko%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 146ms (Views: 18.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Elton+" for 127.0.0.1 at 2012-05-24 16:57:17 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Elton "}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:17.662728', "updated_at" = '2012-05-24 23:57:17.663728' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%elton %') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 162ms (Views: 17.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Elton+J" for 127.0.0.1 at 2012-05-24 16:57:17 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Elton J"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:18.070769', "updated_at" = '2012-05-24 23:57:18.071769' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%elton j%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 188ms (Views: 52.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_author_name?term=Elton+John" for 127.0.0.1 at 2012-05-24 16:57:18 -0700
+  Processing by ItemsController#autocomplete_author_name as JSON
+  Parameters: {"term"=>"Elton John"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:18.922854', "updated_at" = '2012-05-24 23:57:18.923854' WHERE "users"."id" = 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT authors.id, authors.name FROM "authors" WHERE (LOWER(authors.name) LIKE '%elton john%') ORDER BY authors.name ASC LIMIT 10
+Completed 200 OK in 168ms (Views: 20.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/autocomplete_category_name?term=Dis" for 127.0.0.1 at 2012-05-24 16:57:20 -0700
+  Processing by ItemsController#autocomplete_category_name as JSON
+  Parameters: {"term"=>"Dis"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:20.584020', "updated_at" = '2012-05-24 23:57:20.585020' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT categories.id, categories.name FROM "categories" WHERE (LOWER(categories.name) LIKE '%dis%') ORDER BY categories.name ASC LIMIT 10
+Completed 200 OK in 198ms (Views: 20.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2012-05-24 16:57:21 -0700
+
+ActionController::RoutingError (No route matches "/stylesheets/images/ui-bg_glass_100_fdf5ce_1x400.png"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Spo" for 127.0.0.1 at 2012-05-24 16:57:24 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Spo"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:24.888451', "updated_at" = '2012-05-24 23:57:24.889451' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%spo%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 180ms (Views: 18.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/autocomplete_source_name?term=Spotify" for 127.0.0.1 at 2012-05-24 16:57:25 -0700
+  Processing by ItemsController#autocomplete_source_name as JSON
+  Parameters: {"term"=>"Spotify"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:25.828545', "updated_at" = '2012-05-24 23:57:25.829545' WHERE "users"."id" = 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT sources.id, sources.name FROM "sources" WHERE (LOWER(sources.name) LIKE '%spotify%') ORDER BY sources.name ASC LIMIT 10
+Completed 200 OK in 155ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2012-05-24 16:57:36 -0700
+  Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQb2xZziq1rt0nZ0Gk3PmyPInsTYnDq7Ft42war7iqE=", "item"=>{"title"=>"Space Simulation", "excerpt"=>"Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.", "url"=>"http://www.discover.com/money", "published_at(1i)"=>"2012", "published_at(2i)"=>"5", "published_at(3i)"=>"24", "published_at(4i)"=>"23", "published_at(5i)"=>"56"}, "author"=>{"name"=>"Elton John"}, "category"=>{"name"=>"Dissilusion"}, "source"=>{"name"=>"Spotify"}, "commit"=>"Create Item"}
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2012-05-24 23:57:36.366598', "updated_at" = '2012-05-24 23:57:36.367599' WHERE "users"."id" = 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Dissilusion' LIMIT 1
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."name" = 'Elton John' LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors"."id" FROM "authors" WHERE ("authors"."name" = 'Elton John') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "authors" ("name", "url", "created_at", "updated_at") VALUES ('Elton John', NULL, '2012-05-24 23:57:36.554617', '2012-05-24 23:57:36.554617')[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."name" = 'Spotify' LIMIT 1
+  [1m[36mSource Load (0.0ms)[0m  [1mSELECT "sources"."id" FROM "sources" WHERE ("sources"."name" = 'Spotify') LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "sources" ("name", "url", "created_at", "updated_at") VALUES ('Spotify', 'http://www.discover.com', '2012-05-24 23:57:36.616623', '2012-05-24 23:57:36.616623')
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "items" ("title", "url", "excerpt", "published_at", "created_at", "updated_at", "author_id", "source_id", "category_id", "user_id") VALUES ('Space Simulation', 'http://www.discover.com/money', 'Houston, that may have seemed like a very long final phase. The autotargeting was taking us right into a ... crater, with a large number of big boulders and rocks ... and it required ... flying manually over the rock field to find a reasonably good area.', '2012-05-24 23:56:00.000000', '2012-05-24 23:57:36.746636', '2012-05-24 23:57:36.746636', 7, 9, 6, 1)[0m
+Redirected to http://localhost:3000/items/17
+Completed 302 Found in 537ms
+
+
+Started GET "/items/17" for 127.0.0.1 at 2012-05-24 16:57:36 -0700
+  Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 17 LIMIT 1
+  [1m[36mSource Load (1.0ms)[0m  [1mSELECT "sources".* FROM "sources" WHERE "sources"."id" = 9 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 7 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 6 LIMIT 1[0m
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:57:37.200682', "updated_at" = '2012-05-24 23:57:37.201682' WHERE "users"."id" = 1
+Rendered items/show.html.erb within layouts/application (272.0ms)
+Completed 200 OK in 340ms (Views: 288.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:57:42 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 10[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:57:42.675229', "updated_at" = '2012-05-24 23:57:42.676229' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (421.0ms)
+Completed 200 OK in 456ms (Views: 435.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 16:58:02 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (2.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 30[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 9 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-24 23:58:02.874249', "updated_at" = '2012-05-24 23:58:02.875249' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (586.1ms)
+Completed 200 OK in 632ms (Views: 607.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2012-05-24 17:21:46 -0700
+  Processing by ItemsController#index as HTML
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" LIMIT 30[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+DEPRECATION WARNING: Base.named_scope has been deprecated, please use Base.scope instead. (called from <class:User> at C:/Users/orodriguez/Documents/GitHub/items/app/models/user.rb:12)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (1.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSource Load (0.0ms)[0m  SELECT "sources".* FROM "sources" WHERE "sources"."id" = 9 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: save(false) is deprecated, please give save(:validate => false) instead. (called from current_user_session at C:/Users/orodriguez/Documents/GitHub/items/app/controllers/application_controller.rb:11)
+  [1m[35mAREL (2.0ms)[0m  UPDATE "users" SET "last_request_at" = '2012-05-25 00:21:46.547460', "updated_at" = '2012-05-25 00:21:46.548460' WHERE "users"."id" = 1
+Rendered items/index.html.erb within layouts/application (369.0ms)
+Completed 200 OK in 410ms (Views: 383.0ms | ActiveRecord: 9.0ms)
