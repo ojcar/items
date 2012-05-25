@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LaLIBRE - Lo que leer</title>
+  <title>La LIBRE - <%= content_for?(:title) ? content_for(:title) : "Lo que leer" %></title>
   <meta name="description" content="">
 	<meta name="author" content="">
   
@@ -11,19 +11,48 @@
   <%= javascript_include_tag "jquery.min.js", "jquery-ui.min.js", "autocomplete-rails.js", "jquery_ujs.js", "application" %>
 
   <%= csrf_meta_tag %>
+
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>	
 </head>
 <body>
 
-<p><%= flash[:notice] %></p>
-<p><%= flash[:alert] %></p>
+	<div class="container">	
+		<div class="sixteen columns header">
 
-<% if current_user %>
-  Logged in as <%= current_user.username %>, <%= link_to "Log Out", logout_path %>
-  <% else %>
-<%= link_to "Log In", new_user_session_url %>
-  <% end %>
+			<div class="ten columns alpha logo">
+				<a href="/"><img src="/images/la.png" /><img src="/images/libre.png" /></a>
+			</div>
+
+			<div class="six columns menu omega">
+				<% if current_user %>
+				  Logged in as <%= current_user.username %>, <%= link_to "Log Out", logout_path %> <b><a href="/submit">Sugiere un art&iacute;culo</a></b>
+				<% else %>
+					<%= link_to "Ingresa", new_user_session_url %>
+						<% ["twitter", "facebook"].each do |provider| %>
+				    		<%= link_to provider, "/auth/#{provider}" %>
+				  		<% end %>
+				<% end %>
+				
+			</div>
+			
+			<p><%= flash[:notice] %></p>
+			<p><%= flash[:alert] %></p>
+		</div>
+		
+		<div class="sixteen columns nav">
+			<a href="fa">arte</a> <a href="asd">politica</a> <a href="fa">ciencia</a> <a href="asd">deportes</a> <a href="fa">negocios</a> <a href="asd">tecnologia</a>
+		</div>
+
+
   
 <%= yield %>
 
+	</div><!-- container -->
+
 </body>
 </html>
+

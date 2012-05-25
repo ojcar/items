@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   # GET /items.xml
   def index
     @items = Item.find(:all, :limit => 30)
+    @featured = Item.find(:all, :limit => 3)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,6 +21,7 @@ class ItemsController < ApplicationController
   # GET /items/1.xml
   def show
     @item = Item.find(params[:id])
+    @featured = Item.find(:all, :limit=> 5)
 
     respond_to do |format|
       format.html # show.html.erb

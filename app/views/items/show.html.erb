@@ -1,36 +1,35 @@
+<%- title "Leyendo #{@item.title}" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @item.title %>
-</p>
 
-<p>
-  <b>Excerpt:</b>
-  <%= @item.excerpt %>
-</p>
 
-<p>
-  <b>Url:</b>
-  <%= @item.url %>
-</p>
+<div class="four columns sidebar">
+	
+	<div class="box">
+		<h4><%= @item.author.name %></h4>
+		<a href="adgf">Mas historias</a> | <a href="sgdf" class="negative">Follow</a>
+	</div>
+	
+	<ul>
+	<% @featured.each do |f| %>
+		<li><h4><%= f.title %></h4></li>
+	<% end %>
+	</ul>
+		
+</div>
 
-<p>
-  <b>Published at:</b>
-  <%= @item.published_at %>
-</p>
+<div class="ten columns single clearfix">
+<h1><%= @item.title %></h1>
+<div class="byline">
+<h5><%= @item.author.name %></h5>
+</div>
+<p><%= @item.excerpt %></p>
 
-<p>
-	<%= @item.source.name %>
-</p>
+<p>Born in Belgrade, in what was then Yugoslavia, Maja Matarić originally wanted to study languages and art. After she and her mother moved to the United States, in 1981, her uncle, who had immigrated some years earlier, pressed her to concentrate on computers. As a graduate student at the Massachusetts Institute of Technology, Matarić wrote software that helped robots to independently navigate around obstacles placed randomly in a room. For her doctoral dissertation, she developed a robotic shepherd capable of corralling a herd of twenty robots.
+At the end of her graduate training, Matarić, influenced by her knowledge of cognitive science, became interested in how people could benefit from interacting with robots. Now forty-four and a professor of computer science at the University of Southern California, she has begun working with stroke and Alzheimer’s patients and autistic children, searching for a way to make machines that can engage directly with them, encouraging both physical and cognitive rehabilitation.</p>
 
-<p>
-	<%= @item.author.name %>
-</p>
+<%= link_to "Leer en #{@item.source.name}", @item.url %>
+</div>
 
-<p>
-  <%= @item.category.name %>
-</p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>

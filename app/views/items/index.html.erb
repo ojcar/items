@@ -1,36 +1,32 @@
-<h1>Listing items</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-<th>Author</th>
-<th>User</th>
-<th>Source</th>
-    <th>Excerpt</th>
-    <th>Url</th>
-    <th>Published at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @items.each do |item| %>
-  <tr>
-    <td><%= item.title %></td>
-<td><%= item.author.name %></td>
-<td><%= item.user.username %></td>
-<td><%= item.source.name %></td>
-<td><%= item.category.name %></td>
-    <td><%= item.excerpt %></td>
-    <td><%= item.url %></td>
-    <td><%= item.published_at %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+	<div class="one-third column readinglist">
+		<% @items.each do |item| %>
+		
+			<h3><%= link_to item.title, item_path(item) %></h3>
+			<p><%= item.excerpt %></p>
+			<h6>&mdash;<%= link_to item.author.name, author_path(item.author) %> en <%= link_to item.source.name, source_path(item.source) %></h6>
+		
+		<% end %>
+	
+	
+	</div>
 
-<br />
+	<div class="two-thirds column">
 
-<%= link_to 'New Item', new_item_path %>
+		
+	<% @featured.each_with_index { |featured, index| %>
+		<% if index==0 %>
+			<div class="feature">
+		<% elsif index < 2 %>
+			<div class="subject">
+		<% else %>
+			<div class="extendedlist">
+		<% end %>
+				<h1><%= link_to featured.title, item_path(featured) %></h1>
+				<p><%= featured.excerpt %></p>
+				<h5>&mdash;<%= link_to featured.author.name, author_path(featured.author) %> en <%= link_to featured.source.name, source_path(featured.source) %></h5>
+			</div>
+	<% } %>
+
+	</div>

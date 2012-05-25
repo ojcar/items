@@ -18,16 +18,32 @@
 ================================================== */
 body {
 	margin-top:20px;
-	background-image: #f8f8f8 url('../images/separator.png');
+	background-image:url('/images/separator.png');
 	background-repeat: repeat-x;
 	background-position: center top;
 	}
 .header {
-	margin-bottom:10px;
+	padding-top:5px;
+	margin-bottom:0px;
+	background-color:#fff;
 	}
 .menu {
 	text-align:right;
 	}
+.nav {
+	height:30px;
+	background-color:#f8f8f8;
+	background-image:url('/images/separator.png');
+	background-repeat: repeat;
+	margin-bottom:20px;
+	line-height:30px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.nav a { padding-left:2px;padding-right:10px;text-decoration:none;}
+.sidebar {
+	margin-top:170px;
+}
 .feature, .subject {
 	padding:20px;
 	margin-bottom:20px;
@@ -43,8 +59,11 @@ body {
 	color:#CFBA58;
 	text-shadow: 0px 2px black;
 }
-.subject h5, .subject a:link {
+.subject h5 {
 	color:#CFBA58!important;
+}
+.subject a, .subject a:visited, .subject a:hover {
+	color:#cfba58!important;
 }
 .feature p, .subject p {
 	font-family:georgia,serif;
@@ -70,6 +89,21 @@ body {
 	background-color:#21180D;
 	color:#F0EFD1;
 	padding:2px 3px;
+}
+.negative a:hover {
+	background-color:#f60;
+	color:#fff!important;
+}
+.single {
+	margin-top:40px;
+}
+.single .byline {
+	margin-bottom:40px;
+}
+.box {
+	background:#f6f6f6 url('/images/separator.png') repeat;
+	padding:20px;
+	margin-bottom:40px;
 }
 /* #Page Styles
 ================================================== */

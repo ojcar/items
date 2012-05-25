@@ -64,8 +64,9 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 { 
 		color: #181818; 
-		font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
 		font-weight: normal; }
+	h1, h2, h3, h4 {font-family: "Prata", "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
+	h5, h6 {font-family: "Helvetica Neue","Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
 	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
@@ -98,11 +99,11 @@
 	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
 	a:hover, a:focus { color: #000; }
 	p a, p a:visited { line-height: inherit; }
-	
+	.logo a:hover {text-decoration:none!important;}
 
 /* #Lists
 ================================================== */
-	ul, ol { margin-bottom: 20px; }
+	ul, ol { margin-bottom: 20px; border-bottom:solid #f8f8f8 1px;}
 	ul { list-style: none outside; }
 	ol { list-style: decimal; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
@@ -113,7 +114,7 @@
 	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
 	ul ul li, ul ol li,
 	ol ol li, ol ul li { margin-bottom: 6px; }
-	li { line-height: 18px; margin-bottom: 12px; }
+	li { line-height: 18px; margin-bottom: 12px; border-top:solid #f8f8f8 1px;padding-top:10px;}
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 	
