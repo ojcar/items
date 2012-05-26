@@ -37,11 +37,13 @@ body {
 	background-repeat: repeat;
 	margin-bottom:20px;
 	line-height:30px;
-	text-transform:uppercase;
-	font-weight:bold;
+	text-transform:none;
+	font-weight:normal;
+  font-family:georgia;
+  font-size:18px;
 }
 .nav a { padding-left:2px;padding-right:10px;text-decoration:none;}
-.sidebar {
+sidebar {
 	margin-top:170px;
 }
 .feature, .subject {
@@ -66,13 +68,17 @@ body {
 	color:#cfba58!important;
 }
 .feature p, .subject p {
-	font-family:georgia,serif;
+  font-family:"open sans",georgia,serif;
 	font-size:19px;
 	line-height:26px;
 	}
 .readinglist h6 {
 	margin-bottom:20px;
 	}
+.readinglist h3 {
+  color:#000;
+  text-shadow: 1px 1px #ccc;
+}
 .readinglist h6 a:link {
 	font-style:italic;
 	}
@@ -96,14 +102,71 @@ body {
 }
 .single {
 	margin-top:40px;
+  margin-bottom:20px;
+
+  padding-bottom:20px;
 }
 .single .byline {
 	margin-bottom:40px;
+  text-align:center;
+}
+.single h1 {
+  text-align:center;
+}
+.content {
+  margin-top:80px;
 }
 .box {
 	background:#f6f6f6 url('/images/separator.png') repeat;
 	padding:20px;
 	margin-bottom:40px;
+}
+.extra {
+    padding-top:20px;
+    border-top:3px double #ddd;
+}
+.wherenext {
+  text-align:center;
+}
+.wherenext h5 {
+  font-family:"prata",georgia,serif;
+  text-align:center;
+  margin-top:40px;
+  margin-bottom:40px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+#navlist li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+.item {
+  width: 210px;
+  margin:5px;
+  float:left;
+}
+.item h5 {
+  font-family:"prata",georgia,serif;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  margin-top:20px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.item h6 {
+  text-align:center;
+  margin-bottom:20px;
+}
+.largeform input[type="text"] {
+  display:inline;
+  width:440px;
+}
+.largeform input[type="submit"] {
+  font-size:14px;
+  line-height:20px;
 }
 /* #Page Styles
 ================================================== */

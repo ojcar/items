@@ -1,15 +1,43 @@
-<p id="notice"><%= notice %></p>
+<%- title "#{@source.name}" %>
+<%- content_for :head  do %>
+  <script src="/javascripts/jquery.masonry.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+      $('#content').masonry({
+        // options
+        itemSelector : '.item',
+        columnWidth : 220,
+        gutterWidth: 30,
+      });
+    });
+  </script>
+<% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @source.name %>
-</p>
 
-<p>
-  <b>Url:</b>
-  <%= @source.url %>
-</p>
+<div class="sixteen columns">
+
+  <h1><%= link_to @source.name, @source.url %> </h1>
+  
+<%= div_for(@source, :class=>"subscribelink") do %>
+		<%= link_to 'Suscribir', subscribe_source_path(@source), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
+<% end %>
+  
 
 
-<%= link_to 'Edit', edit_source_path(@source) %> |
-<%= link_to 'Back', sources_path %>
+ <div class="content">
+    
+      
+        <% @source.items.each do |item| %>
+        
+            <div class="item">
+            <h5><%= link_to item.title, item.url %></h5>
+            <h6><%= item.author.name %></h6>
+            <p><%= item.excerpt %></p>
+            </div>
+          
+        <% end %>
+    
+    </div>
+
+
+</div>

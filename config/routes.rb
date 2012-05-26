@@ -15,7 +15,7 @@ Items::Application.routes.draw do
 
   resources :sources do
     member do
-      post 'seguir'
+      post 'subscribe'
     end
   end
 

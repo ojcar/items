@@ -1,10 +1,38 @@
-<p id="notice"><%= notice %></p>
+<%- title "#{@category.name}" %>
+<%- content_for :head  do %>
+  <script src="/javascripts/jquery.masonry.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+      $('#content').masonry({
+        // options
+        itemSelector : '.item',
+        columnWidth : 220,
+        gutterWidth: 30,
+      });
+    });
+  </script>
+<% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="sixteen columns">
+
+  <h1><%= @category.name %> </h1>
+  
+ <div class="content">
+    
+      
+        <% @category.items.each do |item| %>
+        
+            <div class="item">
+            <h5><%= link_to item.title, item.url %></h5>
+            <h6><%= item.author.name %></h6>
+            <p><%= item.excerpt %></p>
+            </div>
+          
+        <% end %>
+    
+    </div>
+
+
+</div>

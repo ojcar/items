@@ -1,4 +1,13 @@
-<h1>Sign in</h1>
+<div class="sixteen columns">
+
+
+<p>Ingresa con:
+  
+  <% ["twitter", "facebook"].each do |provider| %>
+    <%= link_to provider, "/auth/#{provider}" %>
+  <% end %>
+  
+</p>
 
 <%= form_for(@user_session) do |f| %>
   <% if @user_session.errors.any? %>
@@ -14,22 +23,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br />
+    <%= f.label :username, "Nombre" %><br />
     <%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Contraseña" %><br />
     <%= f.password_field :password %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign in" %>
+    <%= f.submit "Entrar" %>
   </div>
   
-  <p>O ingresa con:</p>
   
-  <% ["twitter", "facebook"].each do |provider| %>
-    <%= link_to provider, "/auth/#{provider}" %>
-  <% end %>
   
   
 <% end %>
+
+
+
+</div>

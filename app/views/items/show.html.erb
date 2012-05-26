@@ -4,6 +4,7 @@
 
 
 
+<!--
 <div class="four columns sidebar">
 	
 	<div class="box">
@@ -18,11 +19,12 @@
 	</ul>
 		
 </div>
+-->
 
-<div class="ten columns single clearfix">
+<div class="eight columns offset-by-four single clearfix">
 <h1><%= @item.title %></h1>
 <div class="byline">
-<h5><%= @item.author.name %></h5>
+<h5><%= @item.author.name %> <a href="sgdf" class="negative">Follow</a></h5>
 </div>
 <p><%= @item.excerpt %></p>
 
@@ -30,6 +32,97 @@
 At the end of her graduate training, Matarić, influenced by her knowledge of cognitive science, became interested in how people could benefit from interacting with robots. Now forty-four and a professor of computer science at the University of Southern California, she has begun working with stroke and Alzheimer’s patients and autistic children, searching for a way to make machines that can engage directly with them, encouraging both physical and cognitive rehabilitation.</p>
 
 <%= link_to "Leer en #{@item.source.name}", @item.url %>
+
 </div>
 
+
+<!-- one column ala mcsweeneys -->
+<!--
+<div class="sixteen columns wherenext">
+  
+  <h5><img src="/images/separator2.png" /></h5>
+  
+  <div class="six columns offset-by-five alpha">
+    <h5>Mas de <%= @item.author.name %></h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+        <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+    
+    
+    <h5>Mas de <%= @item.source.name %></h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  
+  
+</div>
+-->
+<!-- four columns -->
+
+<div class="sixteen columns wherenext">
+  
+  <h5><img src="/images/separator2.png" /></h5>
+  
+  <div class="four columns alpha">
+    <h5>Mas de <%= @item.author.name %></h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+        <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+  </div>  
+  <div class="four columns">
+    <h5>Mas de <%= @item.source.name %></h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="four columns">
+    <h5>Mas de <%= @item.source.name %></h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="four columns omega">
+    <h5>POPULARES</h5>
+    
+    <ul>
+      <% @featured.each do |f| %>
+      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<!--
+<div class="sixteen columns extra">
+    <div class="five columns offset-by-three alpha">
+        <ul>
+        	<% @featured.each do |f| %>
+        		<li><h4><%= f.title %></h4></li>
+        	<% end %>
+        	</ul>
+    </div>
+    <div class="five columns omega clearfix">
+      mas del autor
+    </div>
+</div>
+-->
 

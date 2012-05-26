@@ -53,7 +53,7 @@
 ================================================== */
 	body { 
 		background: #fff;
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font: 14px/21px "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #444; 
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -66,8 +66,9 @@
 		color: #181818; 
 		font-weight: normal; }
 	h1, h2, h3, h4 {font-family: "Prata", "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
-	h5, h6 {font-family: "Helvetica Neue","Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h5, h6 {font-family: "Open Sans", "Helvetica Neue","Georgia", "Times New Roman", Helvetica, Arial, sans-serif;}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; color:#000;}
+  h1 a, h2 a, h3 a {text-decoration:none;}
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
 	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
 	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }

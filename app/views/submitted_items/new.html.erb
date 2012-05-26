@@ -1,16 +1,22 @@
-<h1>SubmittedItems#new</h1>
-<p>Find me in app/views/submitted_items/new.html.erb</p>
+
+<div class="sixteen columns">
+
+<h1>Env&iacute;a una cosa para leer</h1>
+
+<p>Si encontraste un texto emocionante para leer, pasala voz.<br />Pega la direcci&oacute;n en el formulario de abajo.</p>
+
 
 
 <%= form_for(@item) do |f| %>
 
-<div class="field">
-  <%= f.label :url %><br />
-  <%= f.text_field :url %>
+<div class="field largeform">
+  <%= f.label :url, "Esta es la direcci&oacute;n" %><br />
+  <%= f.text_field :url, :size => 250 %> <%= f.submit "Enviar" %>
 </div>
-
- <%= f.submit %>
 
 <% end %>
 
 
+<p></p>
+
+</div>

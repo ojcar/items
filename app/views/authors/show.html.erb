@@ -1,10 +1,40 @@
-<h1>Author#show</h1>
-<p>Find me in app/views/author/show.html.erb</p>
+<%- title "#{@author.name}" %>
+<%- content_for :head  do %>
+  <script src="/javascripts/jquery.masonry.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+      $('#content').masonry({
+        // options
+        itemSelector : '.item',
+        columnWidth : 220,
+        gutterWidth: 30,
+      });
+    });
+  </script>
+<% end %>
 
-<p>
-<%= @author.name %> | <%= @author.url %> | 	<%= div_for(@author, :class=>"followlink") do %>
+
+<div class="sixteen columns">
+
+<h1><%= @author.name %> </h1>
+<%= div_for(@author, :class=>"followlink") do %>
 		<%= link_to 'Seguir', subscribe_author_path(@author), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
-	<% end %>
-</p>
+<% end %>
 
-	
+
+    <div class="content">
+    
+      
+        <% @author.items.each do |item| %>
+        
+            <div class="item">
+            <h5><%= link_to item.title, item.url %></h5>
+            <h6><%= item.source.name %></h6>
+            <p><%= item.excerpt %></p>
+            </div>
+          
+        <% end %>
+    
+    </div>
+
+</div>	
