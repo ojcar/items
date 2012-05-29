@@ -17,11 +17,16 @@
 <div class="sixteen columns">
 
 <h1><%= @author.name %> </h1>
-<%= div_for(@author, :class=>"followlink") do %>
-		<%= link_to 'Seguir', subscribe_author_path(@author), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
+
+<% if !current_user %>
+	<p>Seguir</p>
+<% elsif (current_user and @author.users.include?(current_user))%>
+	Following.
+<% else %>
+	<%= div_for(@author, :class=>"followlink") do %>
+	<%= link_to 'Seguir', subscribe_author_path(@author), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
+	<% end %>
 <% end %>
-
-
     <div class="content">
     
       

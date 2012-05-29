@@ -1,16 +1,26 @@
-<p id="notice"><%= notice %></p>
-
+<div class="sixteen columns">
+<h1><%= @user.username %></h1>
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
-</p>
-
-<p>
-  <b>Email:</b>
   <%= @user.email %>
 </p>
 
+<h2>Siguiendo a:</h2>
+<% if @user.authors.empty? %>
+	<p>Por ahora a nadie.</p>
+<% else %>
+	<% @user.authors.each do |author| %>
+	<p><%= author.name %></p>
+	<% end %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<h2>Suscrito a:</h2>
+<% if @user.sources.empty? %>
+	<p>Por ahora a nadie.</p>
+<% else %>
+		<% @user.sources.each do |source| %>
+			<p><%= source.name %></p>
+		<% end %>
+<% end %>
+
+</div>

@@ -18,10 +18,15 @@
 
   <h1><%= link_to @source.name, @source.url %> </h1>
   
-<%= div_for(@source, :class=>"subscribelink") do %>
+<% if !current_user %>
+	<p>Seguir</p>
+<% elsif (current_user and @source.users.include?(current_user))%>
+	Following.
+<% else %>
+	<%= div_for(@source, :class=>"subscribelink") do %>
 		<%= link_to 'Suscribir', subscribe_source_path(@source), :authenticity_token => form_authenticity_token, :remote => true, :method => :post %>
+	<% end %>
 <% end %>
-  
 
 
  <div class="content">

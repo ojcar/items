@@ -32,7 +32,7 @@
 
 			<div class="six columns menu omega">
 				<% if current_user %>
-        Logged in as <b><%= current_user.username %></b>, <%= link_to "Log Out", logout_path %>
+        Hola <strong><%= current_user.username %></strong>, <%= link_to "Salir", logout_path %>
 				<% else %>
 					  Ingresa con: 
 						<% ["twitter", "facebook"].each do |provider| %>
@@ -67,7 +67,14 @@
       
 		</div>
 
-
+<div class="sixteen columns">
+	<% unless flash[:notice].blank? %>
+		<p class="notice">&nbsp; <%= flash[:notice] %></p>
+	<% end %>
+	<% unless flash[:alert].blank? %>
+		<p class="alert">&nbsp;<%= flash[:alert] %></p>
+	<% end %>
+</div>
   
 <%= yield %>
 

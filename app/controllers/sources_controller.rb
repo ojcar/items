@@ -1,6 +1,18 @@
 class SourcesController < ApplicationController
   #before_filter :check_administrator_role, :except => [:index, :show]
+  before_filter :require_user, :only => [:subscribe]
   
+  def subscribe
+    @source = Source.find(params[:id])
+    
+    unless (@source.users.include?(current_user))
+      @source.users << current_user
+    end
+    
+    respond_to do |format|
+      format.js
+    end
+  end
   
   # GET /sources
   # GET /sources.xml

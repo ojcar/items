@@ -1,4 +1,8 @@
 Items::Application.routes.draw do
+  get "static/about"
+
+  get "static/help"
+
   get "submitted_items/index"
 
   get "submitted_items/new"

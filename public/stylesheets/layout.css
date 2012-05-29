@@ -168,6 +168,9 @@ padding-right: 20px;
   font-size:14px;
   line-height:20px;
 }
+.alert {background-color:#E42217;}
+.notice {background-color:#98AFC7;color:#000;padding-top:5px;padding-bottom:5px;} /* greenish #4CC417 yellowish #ECD672 */
+
 /* #Page Styles
 ================================================== */
 

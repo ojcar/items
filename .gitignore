@@ -10,3 +10,5 @@ log/development.log
 *.log
 ._redcar
 /._redcar
+*.sqlite3
+db/development.sqlite3

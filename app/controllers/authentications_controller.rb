@@ -36,7 +36,7 @@ class AuthenticationsController < ApplicationController
     @authentication = current_user.authentications.find(params[:id])
     @authentication.destroy
     
-    flash[:notice] = 'bye!'
+    flash[:notice] = 'Hasta Pronto.'
     redirect_to authentications_url
   end
   

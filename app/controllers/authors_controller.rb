@@ -1,12 +1,15 @@
 class AuthorsController < ApplicationController
   #before_filter :check_administrator_role, :except => [:index, :show]
   autocomplete :author, :name
+  before_filter :require_user, :only => [:subscribe]
   
   def subscribe
     @author = Author.find(params[:id])
-    @user = User.find(1) # should be current_user
+    #@user = User.find(current_user)
     
-    @author.users << @user
+    unless (@author.users.include?(current_user))
+      @author.users << current_user
+    end
     
     respond_to do |format|
       format.js
