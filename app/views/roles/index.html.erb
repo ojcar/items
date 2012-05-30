@@ -1,2 +1,5 @@
-<h1>Roles#index</h1>
-<p>Find me in app/views/roles/index.html.erb</p>
+<h1>Roles</h1>
+
+<% @roles.each do |role| %>
+	<p><%= role.name %></p>
+<% end %>

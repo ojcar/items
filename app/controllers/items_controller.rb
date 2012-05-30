@@ -52,11 +52,17 @@ class ItemsController < ApplicationController
       
     @item.category = Category.find_or_create_by_name(:name => params[:category][:name])
     @item.author = Author.find_or_create_by_name(params[:author][:name])
+    #@item.source = Source.find_or_create_by_name(:name => params[:source][:name])
     @item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
     @item.user = current_user
+    
+    @item_cache = ItemCache.new(:content => params[:item_cache][:content])
+    
 
     respond_to do |format|
       if @item.save
+        @item_cache.item_id = @item.id
+        @item_cache.save
         format.html { redirect_to(@item, :notice => 'Item was successfully created.') }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else

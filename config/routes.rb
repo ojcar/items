@@ -47,6 +47,10 @@ Items::Application.routes.draw do
   get "roles/update"
 
   get "roles/destroy"
+  
+  get "roles/show"
+  
+  resources :roles
 
   resources :users, :user_sessions
   match 'login' => 'user_sessions#new', :as => :login

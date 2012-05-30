@@ -2,26 +2,24 @@ class RolesController < ApplicationController
   before_filter :check_administrator_role
   
   def index
-    @user = User.find(params[:user_id])
-    @all_roles = Role.all
+    @roles = Role.all
   end
-
-  def update
-    @user = User.find(params[:user_id])
+  
+  def show
     @role = Role.find(params[:id])
-    unless @user.has_role?(@role.name)
-      @user.roles << @role
-    end
-    redirect_to :action => 'index'
   end
-
-  def destroy
-    @user = User.find(params[:user_id])
-    @role = Role.find(params[:id])
-    if @user.has_role?(@role.name)
-      @user.roles.delete(@role)
-    end
-    redirect_to :action => 'index'
+  
+  def new
+    @role = Role.new
   end
-
+  
+  def create
+    @role = Role.new(params[:role])
+    
+    if @role.save
+      redirect_to(@role, :notice => 'Success')
+    else
+      render :action => 'new'
+    end
+  end
 end

@@ -1,0 +1,5 @@
+<h1><%= @role.name %></h1>
+
+<% @role.users.each do |user| %>
+	<p><%= user.username %></p>
+<% end %>

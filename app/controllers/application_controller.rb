@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
   def check_role(role)
     unless current_user && @current_user.has_role?(role)
       flash[:notice] = "No hay acceso"
-      redirect_to index_url
+      redirect_to :root
     end
   end
   

@@ -8,4 +8,6 @@ class Item < ActiveRecord::Base
   belongs_to :source
   belongs_to :user
   
+  has_one :item_cache
+  
 end
