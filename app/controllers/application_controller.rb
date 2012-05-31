@@ -58,4 +58,8 @@ class ApplicationController < ActionController::Base
   def check_editor_role
     check_role('Editor')
   end
+  
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
 end

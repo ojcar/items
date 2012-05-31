@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  #before_filter :check_administrator_role, :except => [:index,:show]
+  before_filter :check_administrator_role, :except => [:index, :show]
   before_filter :require_user, :except => [:index, :show]
   autocomplete :category, :name, :full => true
   autocomplete :author, :name, :full => true
@@ -52,8 +52,8 @@ class ItemsController < ApplicationController
       
     @item.category = Category.find_or_create_by_name(:name => params[:category][:name])
     @item.author = Author.find_or_create_by_name(params[:author][:name])
-    #@item.source = Source.find_or_create_by_name(:name => params[:source][:name])
-    @item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
+    @item.source = Source.find_or_create_by_name(:name => params[:source][:name])
+    #@item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
     @item.user = current_user
     
     @item_cache = ItemCache.new(:content => params[:item_cache][:content])

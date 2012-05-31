@@ -1,5 +1,5 @@
 class SourcesController < ApplicationController
-  #before_filter :check_administrator_role, :except => [:index, :show]
+  before_filter :check_administrator_role, :except => [:index, :show, :subscribe]
   before_filter :require_user, :only => [:subscribe]
   
   def subscribe

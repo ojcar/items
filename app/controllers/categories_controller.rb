@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  #before_filter :check_administrator_role, :except => [:index, :show]
+  before_filter :check_administrator_role, :except => [:index, :show]
   autocomplete :category, :name
   
   # GET /categories

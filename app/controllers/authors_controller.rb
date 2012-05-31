@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  #before_filter :check_administrator_role, :except => [:index, :show]
+  before_filter :check_administrator_role, :except => [:index, :show]
   autocomplete :author, :name
   before_filter :require_user, :only => [:subscribe]
   
