@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530055121) do
+ActiveRecord::Schema.define(:version => 20120601000620) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(:version => 20120530055121) do
     t.integer  "source_id"
     t.integer  "category_id"
     t.integer  "user_id"
+    t.boolean  "featured",     :default => false
+    t.boolean  "published",    :default => true
   end
 
   create_table "roles", :force => true do |t|

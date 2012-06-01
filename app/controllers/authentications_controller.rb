@@ -48,7 +48,8 @@ class AuthenticationsController < ApplicationController
   private
   def sign_in_and_redirect(user)
     unless current_user
-      user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token))
+	  # the true in the call means remember me
+      user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token),true)
       user_session.save
     end
     redirect_to home_path
