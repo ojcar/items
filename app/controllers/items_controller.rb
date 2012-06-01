@@ -8,8 +8,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.find(:all, :limit => 30)
-    @featured = Item.find(:all, :limit => 3)
+    @items = Item.find(:all, :conditions => {:published => true, :featured => false } , :order => "created_at DESC" , :limit => 10)
+    @featured = Item.find(:all, :conditions => {:published => true, :featured => true } , :order => "created_at DESC" , :limit => 3)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -52,9 +52,12 @@ class ItemsController < ApplicationController
       
     @item.category = Category.find_or_create_by_name(:name => params[:category][:name])
     @item.author = Author.find_or_create_by_name(params[:author][:name])
-    @item.source = Source.find_or_create_by_name(:name => params[:source][:name])
-    #@item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
+    #@item.source = Source.find_or_create_by_name(:name => params[:source][:name])
+    @item.source = Source.find_or_create_by_name(:name => params[:source][:name], :url => get_domain_from_url(params[:item][:url]))
     @item.user = current_user
+    
+    @item.featured = true if params[:item][:featured] == 1
+      
     
     @item_cache = ItemCache.new(:content => params[:item_cache][:content])
     

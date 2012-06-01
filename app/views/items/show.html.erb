@@ -28,6 +28,12 @@
 </div>
 <p><%= @item.excerpt %></p>
 
+<% if @item.featured %>
+	<p>featured</p>
+<% else %>
+	<p>not featured</p>
+<% end %>
+
 
 <%= link_to "Leer en #{@item.source.name}", @item.url %>
 

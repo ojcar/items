@@ -63,6 +63,12 @@
 	<% end %>
   </div>
   
+	<div class="field">
+	<%= fields_for "item" do |f| %>
+		<%= f.check_box "featured", :checked => true %> featured
+	<% end %>	
+	</div>
+
 <div class="actions">
 	<%= fields_for "item" do |f| %>
     <%= f.submit %>
