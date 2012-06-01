@@ -1,5 +1,5 @@
 set :application, "lalibre"
-set :repository,  "/Users/ojcar/apps/items/.git"
+set :repository,  "git@github.com:ojcar/items.git"
 #set :local_repository, "/Users/ojcar/apps/items/.git"
 
 #set :scm, :subversion
