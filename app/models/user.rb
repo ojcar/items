@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   attr_accessor :password_confirmation
-  validates :username, :presence => true
   
   has_many :authentications, :dependent => :destroy
   has_many :submitted_items
@@ -14,6 +13,7 @@ class User < ActiveRecord::Base
     c.login_field = :username
   end
   
+  validates :username, :presence => true
   validate do |user|
     if user.new_record?
       user.errors.add(:password, "es requerido") if user.password.blank?
@@ -42,13 +42,15 @@ class User < ActiveRecord::Base
 	# self.email = omniauth["extra"]["user_hash"]["email"]
 	#self.email = omniauth['user_info']['email']
     #self.email = omniauth['info']['email']
-	self.email = omniauth['info']['nickname']
+	  #self.email = omniauth['user_info']['nickname']
     
     case omniauth['provider']
     when 'facebook'
-		self.username = omniauth['user_info']['name']
+		  self.username = omniauth['user_info']['name']
+		  self.email = omniauth['user_info']['email']
     when 'twitter'
-		self.username = omniauth['user_info']['nickname']
+		  self.username = omniauth['user_info']['nickname']
+		  self.email = omniauth['user_info']['name']
     end
     
   end

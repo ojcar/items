@@ -21,8 +21,8 @@ class AuthenticationsController < ApplicationController
       user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
       user.apply_omniauth(omniauth)
       
-      if user.save
-        flash[:info] = 'Success! User created.'
+      if user.save(:validate => false)
+        flash[:info] = 'Bienvenido.'
         sign_in_and_redirect_user(user)
       else
         session[:omniauth] = omniauth.except('extra')
