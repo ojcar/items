@@ -15,7 +15,7 @@ class AuthenticationsController < ApplicationController
       current_user.save
       
       flash[:info] = 'Autenticacion exitosa'
-      redirect_to home_url
+      redirect_to root_url
     else
       user = User.new
       user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
@@ -26,7 +26,7 @@ class AuthenticationsController < ApplicationController
         sign_in_and_redirect_user(user)
       else
         session[:omniauth] = omniauth.except('extra')
-        redirect_to 'signup_path'
+        redirect_to login_path
       end
          
     end
@@ -52,6 +52,6 @@ class AuthenticationsController < ApplicationController
       user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token),true)
       user_session.save
     end
-    redirect_to home_path
+    redirect_to root_url
   end
 end

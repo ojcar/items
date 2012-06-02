@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password_confirmation
-  validates :name, :presence => true
+  validates :username, :presence => true
   
   has_many :authentications, :dependent => :destroy
   has_many :submitted_items
@@ -40,7 +40,9 @@ class User < ActiveRecord::Base
   def apply_omniauth(omniauth)
 	# for facebook this may be
 	# self.email = omniauth["extra"]["user_hash"]["email"]
-    self.email = omniauth['user_info']['email']
+	#self.email = omniauth['user_info']['email']
+    #self.email = omniauth['info']['email']
+	self.email = omniauth['info']['nickname']
     
     case omniauth['provider']
     when 'facebook'
