@@ -20,6 +20,8 @@ class AuthenticationsController < ApplicationController
       user = User.new
       user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
       user.apply_omniauth(omniauth)
+
+      user.reset_persistence_token      
       
       if user.save(:validate => false)
         flash[:info] = 'Bienvenido.'
@@ -49,8 +51,10 @@ class AuthenticationsController < ApplicationController
   def sign_in_and_redirect(user)
     unless current_user
 	  # the true in the call means remember me
-      user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token),true)
-      user_session.save
+      #user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token),true)
+      @user = User.find_by_persistence_token(user.persistence_token)
+      user_session = UserSession.create(@user,true)
+      #user_session.save
     end
     redirect_to root_url
   end
