@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
+source 'http://gems.github.com'
 
-gem 'rails', '3.0.5'
+#gem 'rails', '3.0.5'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,12 +13,18 @@ gem 'sqlite3'
 
 gem 'authlogic'
 gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
-gem 'jquery-rails', '>= 1.0.12'
+gem 'jquery-rails'#, '>= 1.0.12'
 
 gem 'rails3-jquery-autocomplete'
 
 gem "rake", "0.8.7"
+
+gem 'peterc-whatlanguage'
+
+gem "font-awesome-rails"
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -40,3 +48,14 @@ gem "rake", "0.8.7"
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier',     '>= 1.0.3'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'bullet'
+end

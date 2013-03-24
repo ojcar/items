@@ -21,7 +21,7 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(:items) }
+        format.html { redirect_to root_url }
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else
         format.html { render :action => "new" }
@@ -38,8 +38,8 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 
     respond_to do |format|
-      format.html { redirect_to(:items, :notice => 'Hasta Pronto.') }
-      #format.xml  { head :ok }
+      format.html { redirect_to root_url, :notice => 'Hasta Pronto.' }
+      format.xml  { head :ok }
     end
   end
 end
