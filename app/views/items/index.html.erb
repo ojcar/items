@@ -1,20 +1,46 @@
+<div class="five columns readinglist">
+	<% @items.each do |item| %>
+		<h5><%= link_to item.title, item_path(item) %></h5>
+		<h6><%= item.author.name %></h6>
+		<!-- <h6><%= link_to item.author.name, author_path(item.author) %></h6> -->
+	<% end %>
+</div>
 
 
-	<div class="one-third column readinglist">
-		<% @items.each do |item| %>
-		
-			<h3><%= link_to item.title, item_path(item) %></h3>
-			<p><%= item.excerpt %></p>
-			<h6>&mdash;<%= link_to item.author.name, author_path(item.author) %> en <%= link_to item.source.name, source_path(item.source) %></h6>
-		
-		<% end %>
-	
-	
+
+
+
+
+
+
+<div class="eleven columns post">
+	<div class="two-thirds column tuit arrow_box">
+		Even the scientists struggled to believe it was snow, not graupel. The sleet that we’re receiving could look a lot like snow, could actually well be snow flakes drifting down horizontally. <em>&mdash; @vega</em>
 	</div>
-
-	<div class="two-thirds column">
-
+	<div class="two-thirds column teaser">
+		<div class="excerpt">
+		<h4>Is There Life After Fifty for a Songwriter?</h4>
+		<h5>Gustavo Gutierrez</h5>
 		
+		<p>The anecdotal data I have acquired over time tells me that fifty year old rock artists don’t do very good work. Certainly nothing close to what they achieved in their twenties. There are obviously exceptions, but I got to thinking about artist’s output over time. Are there examples of artists who not only age gracefullly, but who actually get better? So I grabbed some data.</p>
+	</div>
+	</div>
+</div>
+
+<div class="eleven columns">
+	<div class="two-thirds column tuit">
+		Even the scientists struggled to believe it was snow, not graupel. The sleet that we’re receiving could look a lot like snow, could actually well be snow flakes drifting down horizontally,
+	</div>
+	<div class="two-thirds column teaser">
+		<%=@featured.first.title %>
+		<%=@featured.first.excerpt %>
+		<h5><%= @featured.first.author.name %></h5>
+	</div>
+</div>
+
+
+<!-- 
+<div class="two-thirds column">
 	<% @featured.each_with_index { |featured, index| %>
 		<% if index==0 %>
 			<div class="feature">
@@ -25,8 +51,8 @@
 		<% end %>
 				<h1><%= link_to featured.title, item_path(featured) %></h1>
 				<p><%= featured.excerpt %></p>
-				<h5>&mdash;<%= link_to featured.author.name, author_path(featured.author) %> en <%= link_to featured.source.name, source_path(featured.source) %></h5>
+				<h5><%= link_to featured.author.name, author_path(featured.author) %> en <%= link_to featured.source.name, source_path(featured.source) %></h5>
 			</div>
 	<% } %>
-
-	</div>
+ </div>
+-->

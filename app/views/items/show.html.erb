@@ -2,131 +2,36 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="sixteen columns main_section">
 
-
-<!--
-<div class="four columns sidebar">
-	
-	<div class="box">
-		<h4><%= @item.author.name %></h4>
-		<a href="adgf">Mas historias</a> | <a href="sgdf" class="negative">Follow</a>
-	</div>
-	
-	<ul>
-	<% @featured.each do |f| %>
-		<li><h4><%= f.title %></h4></li>
-	<% end %>
-	</ul>
-		
-</div>
--->
-
-<div class="eight columns offset-by-four single clearfix">
-<h1><%= @item.title %></h1>
-<div class="byline">
-<h5><%= @item.author.name %> <a href="sgdf" class="negative">Follow</a></h5>
-</div>
-<p><%= @item.excerpt %></p>
-
-<% if @item.featured %>
-	<p>featured</p>
-<% else %>
-	<p>not featured</p>
-<% end %>
-
-
-<%= link_to "Leer en #{@item.source.name}", @item.url %>
-
-</div>
-
-
-<!-- one column ala mcsweeneys -->
-<!--
-<div class="sixteen columns wherenext">
-  
-  <h5><img src="/images/separator2.png" /></h5>
-  
-  <div class="six columns offset-by-five alpha">
-    <h5>Mas de <%= @item.author.name %></h5>
+  <div class="eight columns clearfix">
+    <h2><%= @item.title %></h2>
     
-    <ul>
-      <% @featured.each do |f| %>
-        <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
+    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.
+
+    <p>Here men from the planet Earth first set foot upon the Moon. July 1969 AD. We came in peace for all mankind.
+
+    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.
     
+
+    <p><%= @item.excerpt %></p>
+
     
-    <h5>Mas de <%= @item.source.name %></h5>
-    
-    <ul>
-      <% @featured.each do |f| %>
-      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
+
+    <%= link_to "Leer en #{@item.source.name}", @item.url %>
+
   </div>
-  
-  
-</div>
--->
-<!-- four columns -->
 
-<div class="sixteen columns wherenext">
-  
-  <h5><img src="/images/separator2.png" /></h5>
-  
-  <div class="four columns alpha">
-    <h5>Mas de <%= @item.author.name %></h5>
-    
-    <ul>
-      <% @featured.each do |f| %>
-        <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
-  </div>  
-  <div class="four columns">
-    <h5>Mas de <%= @item.source.name %></h5>
-    
-    <ul>
-      <% @featured.each do |f| %>
-      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="four columns">
-    <h5>Mas de <%= @item.source.name %></h5>
-    
-    <ul>
-      <% @featured.each do |f| %>
-      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="four columns omega">
-    <h5>POPULARES</h5>
-    
-    <ul>
-      <% @featured.each do |f| %>
-      		 <li><%= link_to f.title, f.url %><br/><%= f.author.name %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
-
-
-<!--
-<div class="sixteen columns extra">
-    <div class="five columns offset-by-three alpha">
-        <ul>
-        	<% @featured.each do |f| %>
-        		<li><h4><%= f.title %></h4></li>
-        	<% end %>
-        	</ul>
+  <div class="eight columns">
+    <div class="byline">
+    <h5><%= @item.author.name %> <a href="sgdf" class="negative">Follow</a></h5>
     </div>
-    <div class="five columns omega clearfix">
-      mas del autor
-    </div>
-</div>
--->
 
+    <% if @item.featured %>
+      <p>featured</p>
+    <% else %>
+      <p>not featured</p>
+    <% end %>
+
+  </div>
+</div>

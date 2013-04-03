@@ -24,7 +24,7 @@ gem "rake", "0.8.7"
 
 gem 'peterc-whatlanguage'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

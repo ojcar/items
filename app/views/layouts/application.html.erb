@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>La LIBRE - <%= content_for?(:title) ? content_for(:title) : "Lo que leer" %></title>
-  <meta name="description" content="">
-	<meta name="author" content="">
+  <title>LaLIBRE.co - <%= content_for?(:title) ? content_for(:title) : "Cosas que puede leer mientras espera" %></title>
+  <meta name="description" content="Recomendaciones de lectura.">
+	<meta name="author" content="Oscar Rodriguez">
   
-  <%= stylesheet_link_tag :all %>
+  <!-- <%= stylesheet_link_tag :all %> -->
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
 
-  <%= javascript_include_tag "jquery.min.js", "jquery-ui.min.js", "autocomplete-rails.js", "jquery_ujs.js", "application" %>
+  <!-- <%= javascript_include_tag "jquery.min.js", "jquery-ui.min.js", "autocomplete-rails.js", "jquery_ujs.js", "application" %> -->
 
   <%= csrf_meta_tag %>
 
@@ -15,21 +17,20 @@
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
-<link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-<%= yield :head %>
-<script type="text/javascript">if (window.location.hash == '#_=_')window.location.hash = '';</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+	<%= yield :head %>
+	<script type="text/javascript">if (window.location.hash == '#_=_')window.location.hash = '';</script>
 </head>
 <body>
-
 	<div class="container">	
+	
 		<div class="sixteen columns header">
-
-			<div class="ten columns alpha logo">
+			<div class="ten columns alpha">
 				<a href="/"><img src="/images/la.png" /><img src="/images/libre.png" /></a>
 			</div>
-
 			<div class="six columns menu omega">
 				<% if current_user %>
         Hola <strong><%= current_user.username %></strong>, <%= link_to "Salir", logout_path %>
@@ -37,56 +38,33 @@
 					  Ingresa con: 
 						<% ["twitter", "facebook"].each do |provider| %>
 				    		<%= link_to provider, "/auth/#{provider}" %>
-				  		<% end %>
+				  	<% end %>
 				<% end %>
-				
 			</div>
-			<!--
-			<p><%= flash[:notice] %></p>
-			<p><%= flash[:alert] %></p>
-    -->
-		</div>
-	
-		<div class="sixteen columns nav">
-      
-      <div class="twelve columns alpha">&nbsp;
-        <!--<div id="navcontainer">
-            <ul id="navlist">
-              <li><a href="/categories/5">Negocios</a></li>
-              <li><a href="/categories/1">Deportes</a></li>
-              <li><a href="/categories/2">Ciencias</a></li>
-              <li><a href="/categories/3">Politica</a></li>
-              <li><a href="/categories/4">Arte</a></li>
-            </ul>
-        </div> -->
-      </div>
-      
-      <div class="four columns menu omega">
-          <a href="/submit">Sugiere un texto</a>
-      </div>
-      
 		</div>
 
-<div class="sixteen columns">
-	<% unless flash[:notice].blank? %>
-		<p class="notice">&nbsp; <%= flash[:notice] %></p>
-	<% end %>
-	<% unless flash[:alert].blank? %>
-		<p class="alert">&nbsp;<%= flash[:alert] %></p>
-	<% end %>
-</div>
+
+		<div class="sixteen columns">
+			<% unless flash[:notice].blank? %>
+				<p class="notice">&nbsp; <%= flash[:notice] %></p>
+			<% end %>
+			<% unless flash[:alert].blank? %>
+				<p class="alert">&nbsp;<%= flash[:alert] %></p>
+			<% end %>
+		</div>
   
-<%= yield %>
+
+		<%= yield %>
 
 
-
-
-<div class="sixteen columns nav footer">
-	<p><a href="/">lalibre.co</a> / en twitter: <a href="http://twitter.com/lalibrelibre">@lalibrelibre</a> / email: lalibre@blogactivo.com</p>
-</div>	
+		<div class="sixteen columns footer">
+			<p>
+				<a href="/">lalibre.co</a> &bullet;
+				<a href="/static/about">¿Qué es?</a> &bullet; 
+				<i class="icon-twitter"></i> <a href="http://twitter.com/lalibrelibre">@lalibrelibre</a> &bullet;
+				<i class="icon-envelope"></i> lalibre@blogactivo.com</p>
+		</div>	
 
 	</div><!-- container -->
-
-</body>
-</html>
+</body></html>
 

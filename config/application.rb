@@ -41,7 +41,9 @@ module Items
     config.filter_parameters += [:password,:password_confirmation]
 
 
-    # config.assets.enabled = true
+    config.assets.enabled = true
     # config.assets.version = '1.0'
+
+    # config.active_record.whitelist_attributes = true
   end
 end
